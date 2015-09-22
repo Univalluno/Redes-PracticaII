@@ -44,3 +44,8 @@ Paquete Socket server
 
 - server-05.py: Se crea un socket TCP y luego se hace uso del metodo 'bind' para asociar el socket a un ip y un puerto. Se hace uso del metodo 'listen' para limitar el numero de conexiones posibles a ese socket. Posteriormente se abre un ciclo de escucha de clientes con el cual se van a aceptar conexiones de clientes y para cada uno se le va a asociar un hilo con la comunicacion a ese cliente en especifico. El hilo asociado al cliente se crea haciendo uso de la funcion 'start_new_thread' a la cual se le debe pasar una funcion creada por el programador que en este caso es 'clientthread'. clientthread, es una funcion que permite crear un ciclo de escucha de mensajes para un cliente en especifico.
  
+echo-server y echo-client
+
+Para ejecutarlos, se hace uso de los comandos respectivamente:
+     python --port puerto echo-server.py
+     python --port puerto echo-client.py
